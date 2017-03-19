@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:f="http://java.sun.com/jsf/core"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>Sign In </title>
+    </h:head>
+    <h:body>
+    	<h1>If you don't have an account you can create it to get extra content : </h1>
+    	<h:form id="inscriptionFormulaire">
+    	 <br/>Nom <h:inputText id="nom" value="#{creerCompteBean.user.nom}" required="true" size="20" maxlength="20" label="Nom" />
+    	 		  <h:message id="nomMessage" for="nom"/>
+    	 <br/>Prenom <h:inputText id="prenom" value="#{creerCompteBean.user.prenom}" required="true" size="20" maxlength="20" label="Prenom" />
+      	 		     <h:message id="prenomMessage" for="prenom"/>
+    	 <br/>E-Mail <h:inputText id="email" value="#{creerCompteBean.user.adresseMail}" required="true" size="40" maxlength="40" label="Mail" />
+       	 		     <h:message id="emailMessage" for="email" />
+    	 <br/>Naissance <h:inputText id="naissance" value="#{creerCompteBean.user.naissance}" required="true" size="10" maxlength="10" label="Naissance" />
+      	 		     <h:message id="naissanceMessage" for="naissance" />
+		 <br/>MotDePasse <h:inputSecret id="motDePasse" value="#{creerCompteBean.user.motDePasse}" required="true" size="20" maxlength="20" label="Mot de passe" />
+      	 		     <h:message id="motDePasseMessage" for="motDePasse" />
+		 <br/><h:commandButton value="inscription" action="compteCreer" />
+    	 <h:messages globalOnly="true" />
+    	</h:form>
+    </h:body>
+</html>
